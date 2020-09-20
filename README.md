@@ -10,7 +10,7 @@ This repository contains an optimal control based lap time simulation for race c
 
 ## Installation
 
- * Download Casadi for Matlab, unzip in your project folder as '/casadi/'
+ * Download Casadi(https://web.casadi.org/get/) for Matlab, unzip as 'casadi' in the root of the project folder
 
 ## Track Data
 
