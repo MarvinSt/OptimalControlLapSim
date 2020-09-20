@@ -16,17 +16,17 @@ bicycle_model
 
 %% INTEGRATOR
 % Runge-Kutta 4 integration or trapezoidal
-RK  = 4;
+RK  = 2;
 
 M   = 1; % Number of integrations steps per interval
 ds  = step_length/M;
 X   = xsym;
 if RK == 4
     for i_ = 1:M
-        k1 = f_rhs(X,controls,Crv);
-        k2 = f_rhs(X+ds/2*k1,controls,Crv);
-        k3 = f_rhs(X+ds/2*k2,controls,Crv);
-        k4 = f_rhs(X+ds*k3,controls,Crv);
+        k1 = f_rhs(X,usym,Crv);
+        k2 = f_rhs(X+ds/2*k1,usym,Crv);
+        k3 = f_rhs(X+ds/2*k2,usym,Crv);
+        k4 = f_rhs(X+ds*k3,usym,Crv);
         X = X + ds/6*(k1+2*k2+2*k3+k4);
     end
 else
